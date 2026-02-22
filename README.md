@@ -1,12 +1,12 @@
 # 📚 Laboratoare Programare Java / Java Programming Labs
 
 <p align="center">
-  [Română](#ro) | 
-  [English](#en)
+  <a href="română">Română</a> | 
+  <a href="english">English</a>
 </p>
 
 ---
-## <a name="ro">🇷🇴 Română</a>
+## 🇷🇴 Română
 
 ### Descriere
 Acest repository conține soluțiile pentru laboratoarele disciplinei **Structuri de Date și Algoritmi**.
@@ -29,7 +29,7 @@ Codul este sub [GNU GPL v3.0](LICENSE-SOURCE-CODE), iar documentația sub [CC BY
 
 ---
 
-## <a name="en">🇺🇸 English</a>
+## 🇺🇸 English
 
 ### Description
 This repository contains the solutions for the **Data Structures and Algorithms** labs.
