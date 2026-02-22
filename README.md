@@ -1,8 +1,8 @@
 # 📚 Laboratoare Programare Java / Java Programming Labs
 
 <p align="center">
-  <a href="#ro">Română</a> | 
-  <a href="#en">English</a>
+  [Română](#ro) | 
+  [English](#en)
 </p>
 
 ---
