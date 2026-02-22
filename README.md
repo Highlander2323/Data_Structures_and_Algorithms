@@ -6,7 +6,7 @@
 </p>
 
 ---
-
+## ro-romanian
 ## 🇷🇴 Română
 
 ### Descriere
@@ -30,6 +30,7 @@ Codul este sub [GNU GPL v3.0](LICENSE-SURCE-CODE), iar documentația sub [CC BY-
 
 ---
 
+## en-english
 ## 🇺🇸 English
 
 ### Description
