@@ -1,11 +1,12 @@
 # 📚 Laboratoare Programare Java / Java Programming Labs
 
 <p align="center">
-  <a href="ro-română">Română</a> | 
-  <a href="en-english">English</a>
+  <a href="ro">Română</a> | 
+  <a href="en">English</a>
 </p>
 
 ---
+## <a name="ro"></a>
 ## 🇷🇴 Română
 
 ### Descriere
@@ -29,6 +30,7 @@ Codul este sub [GNU GPL v3.0](LICENSE-SOURCE-CODE), iar documentația sub [CC BY
 
 ---
 
+## <a name="en"></a>
 ## 🇺🇸 English
 
 ### Description
