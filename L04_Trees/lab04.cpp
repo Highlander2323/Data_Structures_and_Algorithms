@@ -4,20 +4,20 @@
 using namespace std;
 
 struct NodArbore {
-    char nume[100];
+    int val;
     NodArbore* primulFiu;
     NodArbore* urmatorulFrate;
 
-    NodArbore(char n[100]) {
-        strcpy(nume, n);
+    NodArbore(int v) {
+        val = v;
         primulFiu = nullptr;
         urmatorulFrate = nullptr;
     }
 };
 
 // Adaugă un copil unui părinte
-void adaugaCopil(NodArbore* parinte, char n[100]) {
-    NodArbore* nou = new NodArbore(n);
+void adaugaCopil(NodArbore* parinte, int val) {
+    NodArbore* nou = new NodArbore(val);
     
     if (parinte->primulFiu == nullptr) {
         parinte->primulFiu = nou;
@@ -35,7 +35,7 @@ void adaugaCopil(NodArbore* parinte, char n[100]) {
 void traversarePreOrdine(NodArbore* nod) {
     if (nod == nullptr) return;
 
-    cout << nod->nume << " "; // Vizităm rădăcina
+    cout << nod->val << " "; // Vizităm rădăcina
     traversarePreOrdine(nod->primulFiu);   // Vizităm recursiv copiii
     traversarePreOrdine(nod->urmatorulFrate); // Vizităm frații
 }
@@ -45,7 +45,7 @@ void traversarePostOrdine(NodArbore* nod) {
     if (nod == nullptr) return;
 
     traversarePostOrdine(nod->primulFiu);
-    cout << nod->nume << " "; // Vizităm nodul după ce am terminat copiii
+    cout << nod->val << " "; // Vizităm nodul după ce am terminat copiii
     traversarePostOrdine(nod->urmatorulFrate);
 }
 
@@ -53,7 +53,7 @@ void afisareArbore(NodArbore* nod, int nivel) {
     if (nod == nullptr) return;
 
     for (int i = 0; i < nivel; i++) cout << "  "; // Indentare
-    cout << "|_" << nod->nume << endl;
+    cout << "|_" << nod->val << endl;
 
     afisareArbore(nod->primulFiu, nivel + 1);    // Coborâm în ierarhie
     afisareArbore(nod->urmatorulFrate, nivel);   // Rămânem la același nivel pentru frați
@@ -100,16 +100,15 @@ int calculeazaAdancime(NodArbore* nod){
 
 
 int main() {
-    NodArbore* radacina = new NodArbore("C:");
+    NodArbore* radacina = new NodArbore(0);
 
     // Adăugăm copii pentru rădăcină
-    adaugaCopil(radacina, "Fotografii");
-    adaugaCopil(radacina, "Documente");
-    adaugaCopil(radacina, "Descarcari");
+    adaugaCopil(radacina, 10);
+    adaugaCopil(radacina, 20);
+    adaugaCopil(radacina, 30);
 
-    // Adăugăm copii pentru nodul 20 (nepoți pentru rădăcină)
-    adaugaCopil(radacina->primulFiu, "chermeza.png");
-    adaugaCopil(radacina->primulFiu, "selfie.jpeg");
+    adaugaCopil(radacina->primulFiu, 13);
+    adaugaCopil(radacina->primulFiu, 14);
 
     cout << "Structura Arborelui General:" << endl;
     afisareArbore(radacina, 0);
