@@ -13,7 +13,7 @@
 Acest repository conține soluțiile pentru laboratoarele disciplinei **Structuri de Date și Algoritmi**.
 
 ### 🛠️ Detalii Tehnice
-* **Limbaj:** C++
+* **Limbaj:** C/C++
 * **Compilator:** [MinGW](https://sourceforge.net/projects/mingw/)
 * **IDE Recomandat:** [CodeBlocks]([https://netbeans.apache.org/front/main/download/nb28/](https://www.codeblocks.org/downloads/binaries/))
 * **Alte opțiuni:**
@@ -31,7 +31,7 @@ Codul este sub [GNU GPL v3.0](LICENSE-SOURCE-CODE), iar documentația sub [CC BY
 This repository contains the solutions for the **Data Structures and Algorithms** labs.
 
 ### 🛠️ Technical Details
-* **Language:** C++
+* **Language:** C/C++
 * **Compiler:** [MinGW](https://sourceforge.net/projects/mingw/)
 * **Recommended IDE:** [CodeBlocks]([https://netbeans.apache.org/front/main/download/nb28/](https://www.codeblocks.org/downloads/binaries/))
 * **Other options:**
