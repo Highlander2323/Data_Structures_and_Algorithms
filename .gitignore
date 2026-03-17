@@ -3,6 +3,8 @@
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
+launch.json
+tasks.json
 
 # --- C++ Binaries ---
 *.exe
