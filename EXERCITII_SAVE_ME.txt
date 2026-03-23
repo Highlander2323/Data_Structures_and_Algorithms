@@ -1,0 +1,34 @@
+1. Se dă o listă dublu-înlănțuită care conține deja numerele 2, 5, 8. Să se citească restul numerelor de la 1 la 10, în orice ordine, și să se adauge pe rând, în poziția corectă în listă.
+	Logica:
+	Dacă avem lista: 2 <-> 5 <-> 8 și citim 4, dorim ca lista să arate astfel: 2 <-> 4 <-> 5 <-> 8. Continuăm cu restul numerelor. Nu acceptăm numere <1 și > 10. Hint: implementați adăugarea selectivă.
+2. Se citește un șir de paranteze (curbe, drepte, acolade) de la tastatură. Să se verifice dacă parantezele sunt închise corect.
+	Exemple:
+	(()) -> Închise corect!
+	()[]{}([]) -> Închise corect!
+	(()] -> Închise incorect!
+	()))( -> Închise incorect!
+	Logica:
+	Se folosește o stivă. Se adaugă în stivă toate parantezele deschise ( '(', '[', '{'). Apoi, când se întâlnește o paranteză închisă, se verifică primul element din stivă (dacă există) dacă închide paranteza corespunzătoare. În caz negativ, se poate termina programul și afișa un mesaj. În caz afirmativ, se scoate acea paranteză din stivă și se continuă.
+
+3. Inversarea unei Cozi folosind o Stivă
+	Cerință:
+	Se implementează o coadă clasică. Folosind o stivă ca structură auxiliară, inversați ordinea elementelor din coadă.
+	Logica:
+	1.  Extrage tot din coadă și pune în stivă ( c - coada, s - stiva: c.primul() -> s.adauga() -> c.sterge()).
+    	2.  Extrage tot din stivă și pune înapoi în coadă (c - coada, s - stiva: s.primul() -> c.adauga() ->  s.sterge()).
+
+4. Implementarea unui "Recent Files"
+
+Multe programe (ca Word sau VS Code) păstrează o listă cu ultimele fișiere deschise. Când deschizi un fișier nou, el apare primul. Dacă lista e plină, cel mai vechi fișier dispare.
+	Cerință:
+	Folosiți o listă dublu înlănțuită pentru a stoca numele fișierelor (șiruri de caractere) și simulați comportamentul unei cozi cu prioritate de acces.
+	Logica:
+	Deschidere fișier nou (open):
+
+        	Dacă fișierul nu există în listă:
+		Adaugă-l la începutul listei (head). Dacă lista a depășit dimensiunea maximă (să zicem 5 elemente), șterge ultimul element.
+
+        	Dacă fișierul există deja în listă:
+		Mută-l de la poziția curentă direct la începutul listei (pentru că a devenit cel mai recent utilizat).
+	
+	Afișare istoric: Parcurge lista de la cap la coadă pentru a vedea ordinea actuală.
