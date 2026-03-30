@@ -32,3 +32,42 @@ Multe programe (ca Word sau VS Code) păstrează o listă cu ultimele fișiere d
 		Mută-l de la poziția curentă direct la începutul listei (pentru că a devenit cel mai recent utilizat).
 	
 	Afișare istoric: Parcurge lista de la cap la coadă pentru a vedea ordinea actuală.
+
+
+
+
+1.  Inerare corectă
+ Cerință: Se dă o listă dublu-înlănțuită care conține deja numerele 2, 5, 8. Să se citească restul numerelor de la 1 la 10, în orice ordine, și să se adauge pe rând, în poziția corectă în listă.
+      Logica:
+      Dacă avem lista: 2 <-> 5 <-> 8 și citim 4, dorim ca lista să arate astfel: 2 <-> 4 <-> 5 <-> 8. Continuăm cu restul numerelor. Nu acceptăm numere <1 și > 10. Hint: implementați adăugarea selectivă.
+
+2. "Oglinda" (Afișare Inversă)
+
+Cerință: Adăugați o funcție afisareInversa(NodListaDublu *head) care să parcurgă lista până la ultimul nod, iar apoi să folosească legăturile inainte pentru a afișa valorile de la coadă la cap.
+
+    De ce te ajută: Verificați dacă ați setat corect pointerii inainte la fiecare inserare. Dacă inainte e NULL unde nu trebuie, programul va da erori.
+
+Hint: Mergi cu un while până când nodCurent->urmator == NULL, apoi întoarce-te folosind nodCurent->inainte până ajungi înapoi la primul nodul.
+3. Numărare
+Cerință: Se dă o listă dublu înlănțuită cu caractere citite de la tastatură, doar literele mici ale alfabetului latin. Să se afișeze pe ecran de câte ori apare fiecare literă în listă.
+
+4. "Mijlocul" listei
+
+Cerință: Scrieți o funcție gasesteMijloc(NodListaDublu *head) care să returneze valoarea nodului aflat exact la jumătatea listei. Hint; stabiliți prima dată lungimea listei.
+
+
+5. Swap între vecini
+
+Cerință: Scrieți o funcție schimbaCuUrmatorul(NodListaDublu *head, int valoareTarget). Găsește nodul care are valoareTarget și inversează-i poziția cu nodul care urmează după el.
+
+    Atenție: Trebuie să refaceții 6 legături (pointerii urmator și inainte pentru nodul curent, cel de după el, cel de dinainte și cel de după-după).
+
+6. Ștergere duplicate.
+
+Cerință: Presupunând că lista dvs. este deja sortată, scrieți o funcție eliminaDuplicate(NodListaDublu *head) care să lase doar o singură apariție pentru fiecare număr.
+
+    Exemplu: Din START <-> 1 <-> 2 <-> 2 <-> 3 <-> 3 <-> CAPAT să rezulte START <-> 1 <-> 2 <-> 3 <-> CAPAT.
+
+    De ce e util: Te obligă să combini parcurgerea cu ștergerea selectivă și eliberarea memoriei (free) în timp ce ești încă "în mișcare" prin listă.
+
+ÎNCĂRCAȚI FIȘIERELE .c ȘI EVENTUAL SCREENSHOT-URI CU CODUL RULAT
