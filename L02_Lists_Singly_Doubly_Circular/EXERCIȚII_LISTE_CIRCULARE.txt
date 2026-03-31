@@ -1,12 +1,12 @@
 1. BILEȚELE 
 Se dă o listă cirulară care memorează în fiecare nod un câmp șir de caractere char mesaj[100]. Se presupune că aceste noduri reprezintă niște bilețele așezate în cerc, și dorim să citim aș k-lea bilețel. Citiți de la tastatură un număr n, și apoi n mesaje. Memorați-le într-o listă circulară, iar apoi citind de la tastatură un număr k, citiți al k-lea bilețel (afișați-l pe ecran), pornind de la primul bilet. Oricare mesaj poate fi primul. Nu există cerințe legate de mesaj, orice mesaj în maximum 99 de caractere.
 
-2. CINE RĂMÂNE PRIMUL?
-Un număr de N copii se joacă "Cine rămâne primul". Toți copiii se așază în cerc, iar altcineva îi numără. Se începe de la un copil care este ales capătul listei circulare, și se strigă un număr k. Se numără până la acea valoare k, iar acel copil este eliminat din grup. Citiți un număr n de la tastatură, memorați copiii într-o listă circulară, codificându-i pe fiecare cu un număr de la 1 la n, iar apoi cât timp există cel puțin 2 copii în listă, citiți un număr k. Numărând de la capul listei (începând cu 1), se elimină copilul care nimerește numărătoarea la k. Afișați numărul câștigător, cel care rămâne singur în grup.
+2. CINE RĂMÂNE ULTIMUL?
+Un număr de N copii se joacă "Cine rămâne ultimul". Toți copiii se așază în cerc, iar altcineva îi numără. Se începe de la un copil care este ales capătul listei circulare, și se strigă un număr k. Se numără până la acea valoare k, iar acel copil este eliminat din grup. Citiți un număr n de la tastatură, memorați copiii într-o listă circulară, codificându-i pe fiecare cu un număr de la 1 la n, iar apoi cât timp există cel puțin 2 copii în listă, citiți un număr k. Numărând de la capul listei (începând cu 1), se elimină copilul care nimerește numărătoarea la k. Afișați numărul câștigător, cel care rămâne singur în grup.
 Ex: 1 - 2 - 3 - 4 -> e citește k=10. Se elimină Copilul 2 | 1 - 3 - 4 -> se citește k=6. Se elimină copilul 4 | 1 - 3 -> se citește k = 9. Se elimină copilul 1. Câștigător 3.
 
 3. "SEMAFORUL INTELIGENT"
-Se dă o listă circulară de culori (Roșu, Galben, Verde) șiruri de caractere. Fiecare nod are și un câmp durata (secunde) număr întreg nenul pozitiv. Scrieți un program care simulează T secunde de funcționare. Acest număr T se citește de la tastatură, iar la fiecare pas programul scade din valoarea T durata culorii la care este acum semaforul. Când durata ajunge la 0 sau o valoare negativă, se oprește programul și se afișează ce culoare arată în prezent semaforul.
+Se dă o listă circulară de culori (Roșu, Galben, Verde) șiruri de caractere. Fiecare nod are și un câmp durata (secunde) număr întreg nenul pozitiv. Scrieți un program care simulează T secunde de funcționare. Acest număr T se citește de la tastatură, iar la fiecare pas programul afișează pe ecran culoarea, alături de numărul T de secunde rămase și scade din valoarea T durata culorii la care este acum semaforul . Programul se oprește când T ajunge la o valoare mai mică sau egală cu 0.
 
 4. ZUMA
 Se dă o listă circulară inițială, cu numere de la 1 la 5, oricâte și în orice ordine. Afișați lista cirulară inițială și apoi rulați următorii pași de 10 ori:
