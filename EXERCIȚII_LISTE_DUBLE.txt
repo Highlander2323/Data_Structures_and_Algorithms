@@ -36,7 +36,7 @@ Multe programe (ca Word sau VS Code) păstrează o listă cu ultimele fișiere d
 
 
 
-1.  Inerare corectă
+1.  Inserare corectă
  Cerință: Se dă o listă dublu-înlănțuită care conține deja numerele 2, 5, 8. Să se citească restul numerelor de la 1 la 10, în orice ordine, și să se adauge pe rând, în poziția corectă în listă.
       Logica:
       Dacă avem lista: 2 <-> 5 <-> 8 și citim 4, dorim ca lista să arate astfel: 2 <-> 4 <-> 5 <-> 8. Continuăm cu restul numerelor. Nu acceptăm numere <1 și > 10. Hint: implementați adăugarea selectivă.
