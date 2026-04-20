@@ -6,7 +6,6 @@ using namespace std;
 struct NodArbore {
     int val;
     NodArbore *stang, *drept;
-
     NodArbore(int v) : val(v), stang(nullptr), drept(nullptr) {}
 };
 
@@ -39,7 +38,6 @@ NodArbore* gasesteMinim(NodArbore* radacina) {
     return radacina;
 }
 
-// 3. DELETION (Stergere)
 void sterge(NodArbore* &radacina, int val) {
     if (radacina == nullptr) return;
 
@@ -55,7 +53,7 @@ void sterge(NodArbore* &radacina, int val) {
         if (radacina->stang == nullptr) {
             NodArbore* temp = radacina->drept;
             delete radacina;
-            radacina = temp; // Updates the parent's pointer automatically
+            radacina = temp;
         } 
         else if (radacina->drept == nullptr) {
             NodArbore* temp = radacina->stang;
@@ -74,11 +72,53 @@ void sterge(NodArbore* &radacina, int val) {
     }
 }
 
-void afisareInordine(NodArbore* radacina) {
-    if (radacina == nullptr) return;
-    afisareInordine(radacina->stang);
-    cout << radacina->val << " ";
-    afisareInordine(radacina->drept);
+void afisareInordine(NodArbore* nod) {
+    if (nod == nullptr) return;
+    afisareInordine(nod->stang);
+    cout << nod->val << " ";
+    afisareInordine(nod->drept);
+}
+
+void afisarePreordine(NodArbore* nod){
+    if (nod == nullptr) return;
+    cout << nod->val << " ";
+    afisarePreordine(nod->stang);
+    afisarePreordine(nod->drept);
+}
+
+void afisarePostordine(NodArbore* nod){
+    if (nod == nullptr) return;
+
+    afisarePostordine(nod->stang);
+    afisarePostordine(nod->drept);
+    cout << nod->val << " ";
+}
+
+int numaraFrunze(NodArbore* nod){
+    if(nod == nullptr) return 0;
+    if(nod->stang == nullptr && nod->drept == nullptr) return 1;
+    return numaraFrunze(nod->stang) + numaraFrunze(nod->drept);
+}
+
+int inaltime(NodArbore* nod){
+    if(nod == nullptr) return 0;
+    int inaltimeStanga = inaltime(nod->stang);
+    int inaltimeDreapta = inaltime(nod->drept);
+    return 1 + max(inaltimeStanga, inaltimeDreapta);
+}
+
+void identificaNivel(NodArbore* nod, int nivelCurent, int nivelDorit){
+    if(nod == nullptr) return;
+    if(nivelCurent == nivelDorit){
+        cout << nod->val << " ";
+    }
+    identificaNivel(nod->stang, nivelCurent + 1, nivelDorit);
+    identificaNivel(nod->drept, nivelCurent + 1, nivelDorit);
+}
+
+void afiseazaNivel(NodArbore* nod, int nivelDorit){
+    identificaNivel(nod, 0, nivelDorit);
+    cout << endl;
 }
 
 int main() {
@@ -92,8 +132,12 @@ int main() {
     insereaza(radacina, 1000);
     insereaza(radacina, 270);
     insereaza(radacina, 2280);
+    insereaza(radacina, 1280);
     afisareInordine(radacina);
     cout << endl;
+    cout << numaraFrunze(radacina) << endl;
+    cout << inaltime(radacina) << endl;
+    afiseazaNivel(radacina, 2);
     system("pause");
     return 0;
 }
