@@ -1,0 +1,25 @@
+Problem 1 — Maximum Tasks in a Day
+English:
+
+You have N tasks to complete. Each task takes a certain number of minutes. You have exactly T minutes available today. You want to complete as many tasks as possible (not necessarily the most valuable — just the most number of tasks). Which tasks do you choose?
+
+Română:
+
+Ai N sarcini de rezolvat. Fiecare sarcină durează un număr de minute. Ai la dispoziție exact T minute în ziua de azi. Vrei să rezolvi cât mai multe sarcini (nu neapărat cele mai importante — ci cât mai multe ca număr). Pe care le alegi?
+
+
+Problem 2 — Distribute Cookies / Împărțirea Biscuiților
+
+English:
+
+You have N children and M cookies. Each child i has a greed factor g[i] — the minimum cookie size that will satisfy them. Each cookie j has size s[j]. A cookie satisfies a child only if s[j] >= g[i]. You can give each child at most one cookie. Maximize the number of satisfied children.
+
+Română:
+
+Ai N copii și M biscuiți. Fiecare copil i are un factor de lăcomie g[i] — mărimea minimă a biscuitului cu care e mulțumit. Fiecare biscuite j are mărimea s[j]. Un biscuite îl satisface pe copil doar dacă s[j] >= g[i]. Poți da fiecărui copil cel mult un biscuite. Maximizează numărul de copii mulțumiți.
+
+LEETCODE:
+
+https://leetcode.com/problems/next-greater-element-i/description/
+
+https://leetcode.com/problems/make-the-string-great/description/
